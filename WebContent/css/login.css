@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+.style{
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+	width:400px;
+	height:600px;
+	font-family:"微软雅黑";
+	font-size:20px;
+	}
+.styleFont{
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: left;
+	margin-bottom:30px;
+}
+.styleForm{
+	float: left;
+	width:300px;
+	height: 30px;
+	margin-bottom:30px;
+}
+.styleerror{
+	float:left;
+	height: 18px;
+	width: 200px;
+	color: #F00;
+	font-size: 12px;
+	text-align: center;
+	margin-left:110px;
+}
+.bu{
+	float:left;
+	margin-left:75px;
+	margin-top:50px;
+}
+.error{
+	float:left;
+	margin-left:100px;
+	margin-top:15px;
+	width:250px;
+	text-align:center;
+	font-size:13px;
+	color: #F00;
+}
+/*个人页面字体的一些控制*/
+.fontgr{
+	font-family: "微软雅黑";
+	font-size: large;
+	color: #FFF;
+	float: right;
+	width: 200px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+/* Basic Grey */
+.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea,.basic-grey input[type="password"],.basic-grey input[type="date"]{
+border: 1px solid #DADADA;
+height: 30px;
+width: 100%;
+font-family:"微软雅黑";
+font-size:16px;
+box-shadow: inset 0px 1px 4px #ECECEC;
+-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.basic-grey textarea{
+height:100px;
+text-indent:2em;
+}
+.basic-grey .button {
+background: #FF5353;
+border: none;
+padding: 10px 25px 10px 25px;
+color: #FFF;
+box-shadow: 1px 1px 5px #B6B6B6;
+border-radius: 3px;
+text-shadow: 1px 1px 1px #9E3F3F;
+cursor: pointer;
+}
+.basic-grey .button:hover {
+background: #FE3000;
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	
+	<package name="default" namespace="/" extends="struts-default">
+	
+	<action name="index" class="com.hotnews.action.LastNewsAction">
+			<result name="success" >/index.jsp</result>
+	</action>
+		
+	<action name="registerAction" class="com.hotnews.action.RegisterAction">
+			<result name="success">/login.jsp</result>
+			<result name="input">/register.jsp</result>
+	</action>
+	
+	
+	<action name="myNewsAction" class="com.hotnews.action.MyNewsAction">
+			<result name="success">/mynews.jsp</result>
+	</action>
+	
+	<action name="loginAction" class="com.hotnews.action.LoginAction">
+			<result name="success1" type="redirectAction">showAllUserAction</result>
+			<result name="success2">/userinfo.jsp</result>
+			<result name="success3">/login.jsp</result>
+			<result name="input">/login.jsp</result>
+	</action>
+	
+	<action name="loginOutAction" class="com.hotnews.action.LoginOutAction">
+			<result name="success" type="redirectAction">index</result>
+	</action>
+	
+	<action name="alterUserAction" class="com.hotnews.action.AlterUserAction">
+			<result name="success">/userinfo.jsp</result>
+			<result name="input">/userinfo.jsp</result>
+	</action>
+	
+	<action name="publishNewsAction" class="com.hotnews.action.PublishNewsAction">
+			<result name="success" type="redirectAction">index</result>
+			<result name="input">/createnews.jsp</result>
+	</action>
+	
+	<action name="showTypeNewsAction" class="com.hotnews.action.TypeNewsAction">
+			<result name="success">/newstype.jsp</result>
+			<result name="input" type="redirectAction">index</result>
+	</action>
+	
+	<action name="showNewsAction" class="com.hotnews.action.ShowNewsAction">
+			<result name="success">/detail.jsp</result>
+	</action>
+	
+	<action name="searchAction" class="com.hotnews.action.SearchNewsAction">
+			<result name="success">/searchnews.jsp</result>
+	</action>
+	
+	<action name="showAllUserAction" class="com.hotnews.action.AllUserAction">
+			<result name="success">/admin.jsp</result>
+	</action>
+
+	<action name="showAllNewsAction" class="com.hotnews.action.AllNewsAction">
+			<result name="success">/managenews.jsp</result>
+		</action>
+	
+	<action name="freezeUserAction" class="com.hotnews.action.FreezeUserAction">
+			<result name="success" type="redirectAction">showAllUserAction</result>
+	</action>
+	
+	<action name="deleteUserAction" class="com.hotnews.action.DeleteUserAction">
+			<result name="success" type="redirectAction">showAllUserAction</result>
+	</action>
+	
+	<action name="deleteNewsAction" class="com.hotnews.action.DeleteNewsAction">
+			<result name="success" type="redirectAction">showAllNewsAction</result>
+	</action>
+	
+	<action name="checkNewsAction" class="com.hotnews.action.CheckNewsAction">
+			<result name="success" type="redirectAction">showAllNewsAction</result>
+	</action>
+	
+	</package>
+</struts>

@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<!-- 配置数据库连接信息 -->
+	<!-- 数据库驱动 -->
+	<property name="connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+	<!-- url 相当于：jdbc:mysql://localhost:3306/hibernate4-->
+	<property name="connection.url">jdbc:mysql:///hotnews</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">123456</property>
+	<!-- hibernate可选项信息 -->
+	<!-- 数据库方言 -->
+	<property name="dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+	<!-- 是否打印sql语句 -->
+	<property name="show_sql">true</property>
+	<!-- 格式化sql语句 -->
+	<property name="format_sql">true</property>
+
+	<property name="hbm2ddl.auto">update</property>
+	<!-- 映射文件信息 -->
+	<mapping resource="com/hotnews/entity/user.hbm.xml" />
+	<mapping resource="com/hotnews/entity/news.hbm.xml" />
+</session-factory>
+</hibernate-configuration>
